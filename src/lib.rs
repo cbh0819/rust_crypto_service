@@ -162,3 +162,10 @@ mod integration_tests {
         assert_eq!(ctr_ct.len(), msg.len());
     }
 }
+
+// ── SHA-2 / SHA-3 ──
+mod sha2;
+mod sha3;
+
+pub use sha2::{sha224, sha256, sha384, sha512, to_hex};
+pub use sha3::{sha3_224, sha3_256, sha3_384, sha3_512};
