@@ -1,0 +1,15 @@
+[package]
+name = "rust_aes_lib"
+version = "0.1.0"
+edition = "2021"
+description = "Pure Rust AES implementation for learning purposes"
+authors = ["Learning Project"]
+
+[lib]
+name = "rust_aes_lib"
+
+[dependencies]
+# 외부 의존성 없음 - 순수 Rust 구현
+
+[dev-dependencies]
+# 테스트만을 위한 의존성도 없음
