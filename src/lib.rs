@@ -169,3 +169,21 @@ mod sha3;
 
 pub use sha2::{sha224, sha256, sha384, sha512, to_hex};
 pub use sha3::{sha3_224, sha3_256, sha3_384, sha3_512};
+
+// ── AES-GCM / AES-CCM ──
+mod gcm;
+mod ccm;
+
+pub use gcm::{aes_gcm_encrypt, aes_gcm_decrypt, GcmEncrypted, GcmError};
+pub use ccm::{aes_ccm_encrypt, aes_ccm_decrypt, CcmEncrypted, CcmError};
+
+// ── HMAC / CMAC ──
+mod hmac;
+mod cmac;
+
+pub use hmac::{
+    hmac, hmac_verify, HashAlgorithm,
+    hmac_sha224, hmac_sha256, hmac_sha384, hmac_sha512,
+    hmac_sha3_224, hmac_sha3_256, hmac_sha3_384, hmac_sha3_512,
+};
+pub use cmac::{aes_cmac, aes_cmac_verify};
